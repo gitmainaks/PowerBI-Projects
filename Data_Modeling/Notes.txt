@@ -1,0 +1,146 @@
+
+
+Data Modeling:
+
+1. Structuring (Business Object, Clear structure for the tool)
+2. 3 Parts (Tables, Relationships, and Calculations)
+3. Roles (Fact - What happened, Dimension - Describes what happened)
+4. Shapes (Star Schema, Snowflake Schema, Galaxy Schema)
+                        * Snowflake (When Dimensions are getting bigger, split it and connect, single Fact table)
+						** Galaxy (More than one Fact that are sharing the same Dimension)
+
+
+
+USERELATIONSHIP(DAX) - A DAX function that turns on an inactive relationship for one specific calculation.
+
+Dimensions in Disguise - Extracting Dimensions from the Fact table.
+
+Junk Dimension - Describe A small dimension that bundles several unrelated low-level flags.
+
+Role Playing Dimension - One dimension joined to the same fact through several relationships 
+so it plays different roles. Only one is active at a time.
+
+
+
+Fact Table:
+
+Grain: The level of detail that one row in a fact table represents.
+
+Multiple Facts Model:
+Shared (Conformed) Dimension: One complete dimension that both facts connect to,
+so we can safely compare their measures.
+
+
+Row-Level Security (RLS):
+
+1. Three levels: Table, Column, Row.
+2. RLS filters the rows, the most common.
+3. Static: A role per value. For small projects.
+4. Dynamic: One role + DAX (USERPRINCIPALNAME()). It grows over the period.
+5. Connect the security table in the right direction.
+6. Ask. Secure only what's needed. Test.
+
+
+Business Event:
+Two sections,
+Header & Details
+
+Header > Address,
+		 Customer,
+		 Company,
+		 Order Number,
+		 Order State,
+		 Order Date,
+		 
+Details > List of all products that have been ordered.
+		  Quantity,
+		  Price,
+		  Final Cost,
+		  
+Examples: Orders, Invoices, Shipment, Delivery, Manufacturing, Bill of materials, Production order, tickets, all those transactions
+
+
+fact_ orders
+fact_order_line
+
+All numbers, core measures lie in the "Details".
+
+Make fact_table from the Details and use help of the Headers in order to 
+generate dim_tables, and connect it to fact_table.
+
+
+
+Classical Transactional System (OLTP).
+Same information stored over and over in different tables to optimize UI.
+
+Data Model here is OLAP.
+Single point of truth, stored in a table only once.
+
+
+
+Unpivot - Turning columns into rows 
+
+
+
+Factless Fact:
+Fact Table that has a lof of ID's in order to connect
+to connect multiple Dimensions, it has as well dates. But it doesn't contain
+any numbers (No measures).
+Only tracking whether something happened or not.
+
+
+
+
+
+The Process of Delivery:
+
+	1. Order (Date, NUMBER -> Single point of truth) FACT <- Main Fact
+	2. Ship (Date) F
+	3. Deliver (Date) F
+	4. Invoice (Date, Number) F
+	5. Pay (Date, Number) F
+
+All Fact Tables.
+
+It is called Accumulating Snapshot FACT.
+
+
+
+
+Dim Date : To compare multiple Fact tables in a same view.
+
+
+_measures Table : All major measures in a single table.
+
+
+
+Securing the Model:
+Applying Row Level Security on basis of region, department etc.
+
+Secure only what the requirements need, forcing it onto every fact breaks the grain.
+
+
+
+
+
+Explore before build -
+	Analyze the business
+	Explore the processes
+	Understand the data
+
+Know the grain -
+	a dimension row = one customer
+	a fact row = one sale
+
+Set standards -
+	NAMING
+	PREFIXES
+	SUFFIXES
+	VALUES
+
+Remove that not needed -
+	Keep what reporting needs
+	Remove everything else
+
+Build the star schema -
+	
