@@ -16,7 +16,6 @@
 [![Model](https://img.shields.io/badge/Model-OLAP-2E7D32?style=for-the-badge)](#-core-concepts)
 [![Security](https://img.shields.io/badge/Security-Dynamic_RLS-C62828?style=for-the-badge&logo=shield&logoColor=white)](#-row-level-security-rls)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#-license)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge&logo=github)](#-contributing)
 
 <br/>
 
