@@ -24,7 +24,7 @@
 [🧱 Architecture](#-model-architecture) •
 [🔗 Relationships](#-relationships) •
 [🔐 Security](#-row-level-security-rls) •
-[🧮 DAX](#-dax-examples)
+[🧮 DAX](#-dax)
 
 </div>
 
@@ -39,7 +39,7 @@
 - [🔗 Relationships](#-relationships)
 - [🧠 Core Concepts](#-core-concepts)
 - [🚚 The Order-to-Cash Process](#-the-order-to-cash-process)
-- [🧮 DAX](#-dax-examples)
+- [🧮 DAX](#-dax)
 - [🔐 Row-Level Security (RLS)](#-row-level-security-rls)
 - [🏷️ Naming Standards](#️-naming-standards)
 - [📄 License](#-license)
