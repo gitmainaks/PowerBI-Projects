@@ -82,6 +82,8 @@ Because the dimensions are shared, measures from different processes can be **sa
 
 ### 🗺️ Entity-Relationship View
 
+<img width="879" height="470" alt="Galaxy Schema" src="https://github.com/user-attachments/assets/635d9b4c-1af4-45ce-a774-11709575b695" />
+
 ---
 
 ## 🧱 Model Architecture
