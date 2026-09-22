@@ -2,8 +2,6 @@
 
 <div align="center">
 
-<img src="https://cdn.simpleicons.org/powerbi/F2C811" width="90" alt="Power BI logo"/>
-
 # 🌌 Galaxy Schema Data Model
 
 ### A multi-fact, conformed-dimension analytical model for Power BI
@@ -27,8 +25,7 @@
 [🧱 Architecture](#-model-architecture) •
 [🔗 Relationships](#-relationships) •
 [🔐 Security](#-row-level-security-rls) •
-[🧮 DAX](#-dax-examples) •
-[🤝 Contributing](#-contributing)
+[🧮 DAX](#-dax-examples)
 
 </div>
 
@@ -43,13 +40,9 @@
 - [🔗 Relationships](#-relationships)
 - [🧠 Core Concepts](#-core-concepts)
 - [🚚 The Order-to-Cash Process](#-the-order-to-cash-process)
-- [🧮 DAX Examples](#-dax-examples)
+- [🧮 DAX](#-dax-examples)
 - [🔐 Row-Level Security (RLS)](#-row-level-security-rls)
-- [🛠️ Modeling Methodology](#️-modeling-methodology)
 - [🏷️ Naming Standards](#️-naming-standards)
-- [📂 Repository Structure](#-repository-structure)
-- [🚀 Getting Started](#-getting-started)
-- [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
 ---
@@ -83,15 +76,11 @@ Because the dimensions are shared, measures from different processes can be **sa
 
 <div align="center">
 
-<img src="assets/Galaxy_Schema.png" alt="Galaxy Schema data model diagram" width="100%"/>
-
 *Model view — multiple fact tables connected through shared, conformed dimensions.*
 
 </div>
 
 ### 🗺️ Entity-Relationship View
-
-<img width="879" height="470" alt="Galaxy Schema" src="https://github.com/user-attachments/assets/8f82cfce-4523-4a3a-a12e-91f76011e6a4" />
 
 ---
 
@@ -150,7 +139,7 @@ Every data model is built from **three parts**: 🗂️ **Tables**, 🔗 **Relat
 | `dim_date` | `fact_sales_targets` | `date` | One-to-one, bi-directional |
 | `security` | `dim_customer` | `region` | 🔐 RLS filter propagates from `security` to `dim_customer` |
 
-> ⚠️ **Only one relationship between two tables can be active at a time.** Inactive relationships are activated per calculation with `USERELATIONSHIP()` — see [DAX Examples](#-dax-examples).
+> ⚠️ **Only one relationship between two tables can be active at a time.** Inactive relationships are activated per calculation with `USERELATIONSHIP()` — see [DAX](#-dax-examples).
 
 ---
 
@@ -288,6 +277,6 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ⭐ **If you found this project helpful, please consider giving it a star!** ⭐
 
-<sub>Built with 💛 and Power BI</sub>
+<sub>Built with Power BI</sub>
 
 </div>
