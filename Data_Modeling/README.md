@@ -141,7 +141,7 @@ Every data model is built from **three parts**: 🗂️ **Tables**, 🔗 **Relat
 | `dim_date` | `fact_sales_targets` | `date` | One-to-one, bi-directional |
 | `security` | `dim_customer` | `region` | 🔐 RLS filter propagates from `security` to `dim_customer` |
 
-> ⚠️ **Only one relationship between two tables can be active at a time.** Inactive relationships are activated per calculation with `USERELATIONSHIP()` — see [DAX](#-dax-examples).
+> ⚠️ **Only one relationship between two tables can be active at a time.** Inactive relationships are activated per calculation with `USERELATIONSHIP()` — see [DAX](#-dax).
 
 ---
 
